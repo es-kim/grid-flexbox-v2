@@ -44,15 +44,169 @@ section h2 {
     font-size: 2.5rem;
 }
 
+.color7 {
+    border-color: var(--color7);;
+}
+.color2 {
+    border-color: var(--color2);;
+}
+.color6 {
+    border-color: var(--color6);;
+}
+.color8 {
+    border-color: var(--color8);;
+}
+.color4 {
+    border-color: var(--color4);;
+}
+.color3 {
+    border-color: var(--color3);;
+}
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
+#mission {
+    margin-bottom: 2rem;
+}
+
+section {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section p {
+    max-width: 850px;
+    line-height: 1.8rem;
+}
+
+p img {
+    display: block;
+    max-width: 400px;
+}
+
+section ul {
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    color: var(--color1);
+    font-size: 2rem;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+
+figure {
+    margin: 0 0 1rem;
+    max-height: 400px;
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    object-position: 0 -150px;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.footer {
+    background-color: var(--color5);
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+footer h3 {
+    font-size: 1rem;
+}
+
+.social-media {
+    margin-bottom: 2rem;
+}
+
+.social-media img:first-of-type {
+    margin-right: 0.8rem;
+}
+
+footer address {
+    font-style: normal;
+    font-weight: bold;
+}
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    p img {
+        display: inline;
+        max-width: 600px;
+        float: left;
+        shape-outside: polygon(54.34% 12px, 41.82% 49.50%, 35.5% 97.13%);
+    }
+
+    section ul {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    li {
+        flex-basis: 49%;
+    }
+
+    figure {
+        flex-basis: 50%;
+    }
+
+    figure img {
+        object-position: unset;
+        margin-bottom: -4px;
+    }
+
+    footer {
+        flex-flow: row nowrap;
+    }
+
+    .social-media {
+        margin-bottom: 0;
+    }
+
+    footer > * {
+        flex-basis: 50%;;
+    }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+    #mission {
+        margin-bottom: 6rem;
+    }
+
+    li {
+        flex-basis: 32%;
+    }
+
+    footer > * {
+        flex-basis: 35%;;
+    }
+}
